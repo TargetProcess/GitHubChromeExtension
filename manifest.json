@@ -1,0 +1,26 @@
+{
+    "name": "TP integration",
+    "version": "1.0",
+    "description": "Targetprocess build server/github/plan integration",
+    "background": {
+        "scripts": [
+            "github.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/TargetProcess/TP/tree/feature/*"],
+            "js": ["github.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "https://github.com/TargetProcess/TP/tree/feature/*/"
+    ],
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "manifest_version": 2
+}
